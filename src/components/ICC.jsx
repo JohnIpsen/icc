@@ -1,7 +1,8 @@
 import React, { Component } from "react";
+import { Switch, Route } from "react-router";
 import Header from "./header";
 import SideNav from "./sidebar";
-import logo from "../images/logo.svg";
+import Home from "./home";
 import "../styles/App.css";
 
 class ICC extends Component {
@@ -10,20 +11,9 @@ class ICC extends Component {
       <div className="App">
         <Header />
         <SideNav />
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Switch>
+          <Route exact path="/" component={Home} />
+        </Switch>
       </div>
     );
   }
