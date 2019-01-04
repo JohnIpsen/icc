@@ -12,10 +12,12 @@ class ICC extends Component {
       <div className="App">
         <Header />
         <SideNav />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
-        </Switch>
+        <div className="main-content">
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+          </Switch>
+        </div>
       </div>
     );
   }
