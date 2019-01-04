@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-// import "../styles/header.css";
+import "../styles/sidebar.css";
 import { Menu, Segment, Sidebar } from "semantic-ui-react";
 
 class SideNav extends Component {
   render() {
     return (
-      <Sidebar.Pushable as={Segment}>
+      <Sidebar.Pushable className="sidebar" as={Segment}>
         <Sidebar
           as={Menu}
           animation="overlay"
@@ -14,7 +14,9 @@ class SideNav extends Component {
           visible
           width="thin"
         >
-          <Menu.Item as="a">Home</Menu.Item>
+          <Menu.Item as="a" link="/">
+            Home
+          </Menu.Item>
           <Menu.Item as="a">About</Menu.Item>
           <Menu.Item as="a">Herd Sires</Menu.Item>
           <Menu.Item as="a">Cowherd</Menu.Item>

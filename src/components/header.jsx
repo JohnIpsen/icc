@@ -6,7 +6,7 @@ import { Image } from "semantic-ui-react";
 class Header extends Component {
   render() {
     return (
-      <div>
+      <div className="header">
         <Image
           src={logo}
           as="a"
@@ -14,6 +14,7 @@ class Header extends Component {
           href="http://google.com"
           target="_blank"
         />
+        <h3>Breeding for Genetics That Matter</h3>
       </div>
     );
   }
