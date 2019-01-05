@@ -17,28 +17,28 @@ class SideNav extends Component {
             visible
             width="thin"
           >
-            <Menu.Item href="/">
+            <Menu.Item href="/icc">
               <Button className="side-link">Home</Button>
             </Menu.Item>
-            <Menu.Item href="/about">
+            <Menu.Item href="/icc/about">
               <Button className="side-link">About</Button>
             </Menu.Item>
-            <Menu.Item href="/about">
+            <Menu.Item href="/icc/about">
               <Button className="side-link">Herd Sires</Button>
             </Menu.Item>
-            <Menu.Item href="/about">
+            <Menu.Item href="/icc/about">
               <Button className="side-link">Cowherd</Button>
             </Menu.Item>
-            <Menu.Item href="/about">
+            <Menu.Item href="/icc/about">
               <Button className="side-link">For Sale</Button>
             </Menu.Item>
-            <Menu.Item href="/about">
+            <Menu.Item href="/icc/about">
               <Button className="side-link">Gallery</Button>
             </Menu.Item>
-            <Menu.Item href="/about">
+            <Menu.Item href="/icc/about">
               <Button className="side-link">Links</Button>
             </Menu.Item>
-            <Menu.Item href="/about">
+            <Menu.Item href="/icc/about">
               <Button className="side-link">Contact</Button>
             </Menu.Item>
           </Sidebar>

@@ -14,8 +14,8 @@ class ICC extends Component {
         <SideNav />
         <div className="main-content">
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
+            <Route exact path="/icc" component={Home} />
+            <Route path="/icc/about" component={About} />
           </Switch>
         </div>
       </div>

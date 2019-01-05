@@ -7,7 +7,7 @@ class Header extends Component {
     return (
       <div className="icc-header">
         <div id="header-bg-color" />
-        <img id="ICCLogo" src={logo} as="a" href="/" alt="ICC" />
+        <img id="ICCLogo" src={logo} as="a" href="/icc" alt="ICC" />
         {/* <h3>Breeding for Genetics That Matter</h3> */}
       </div>
     );
