@@ -8,13 +8,14 @@ class Header extends Component {
     return (
       <div className="header">
         <Image
+          id="ICCLogo"
           src={logo}
           as="a"
           size="medium"
           href="http://google.com"
           target="_blank"
         />
-        <h3>Breeding for Genetics That Matter</h3>
+        {/* <h3>Breeding for Genetics That Matter</h3> */}
       </div>
     );
   }
