@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class Home extends Component {
   render() {
-    return <div>you whaddup</div>;
+    return <div>page to be built</div>;
   }
 }
 
