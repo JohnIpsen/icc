@@ -1,3 +1,26 @@
 #about {
   padding: 5% 5%;
 }
+.news-block {
+  margin-top: 2%;
+  background-color: #dcbe9c;
+  border: solid 2px #570008;
+  opacity: 0.9;
+  min-height: 187px;
+}
+.news-img {
+  float: left;
+  margin-right: 2%;
+  max-height: 187px;
+}
+.news-header {
+  text-align: left;
+  padding-top: 2%;
+  margin-top: 0;
+  margin-bottom: 2%;
+}
+.news-meta {
+  text-align: left;
+  margin-bottom: 5%;
+  margin-right: 2%;
+}
