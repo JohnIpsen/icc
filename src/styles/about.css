@@ -1,6 +1,12 @@
 #about {
   padding: 5% 5%;
 }
+.tabular .item {
+  background-color: #dcbe9c;
+  opacity: 0.9;
+  border: solid 2px #570008;
+  padding: 0 2%;
+}
 .news-block {
   margin-top: 2%;
   background-color: #dcbe9c;
