@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Tab } from "semantic-ui-react";
 import News from "../components/about/news";
+import "../styles/about.css";
 
 class About extends Component {
   constructor(props) {
@@ -28,7 +29,7 @@ class About extends Component {
   }
   render() {
     return (
-      <div>
+      <div id="about">
         <Tab panes={this.state.options} />
       </div>
     );
