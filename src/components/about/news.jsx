@@ -2,12 +2,13 @@ import React, { Component } from "react";
 import { Item } from "semantic-ui-react";
 import pap from "../../images/news/pap.jpg";
 import salea from "../../images/news/salea.jpg";
+import "../../styles/about.css";
 
 class News extends Component {
   render() {
     return (
       <div>
-        <Item.Group className="news-block">
+        <Item.Group className="color-block">
           <Item>
             <Item.Image className="news-img" size="tiny" src={pap} />
 
@@ -28,7 +29,7 @@ class News extends Component {
             </Item.Content>
           </Item>
         </Item.Group>
-        <Item.Group className="news-block">
+        <Item.Group className="color-block">
           <Item>
             <Item.Image className="news-img" size="tiny" src={salea} />
 

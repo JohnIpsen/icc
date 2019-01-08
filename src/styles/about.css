@@ -7,13 +7,16 @@
   border: solid 2px #570008;
   padding: 0 2%;
 }
-.news-block {
+.color-block {
   margin-top: 2%;
   background-color: #dcbe9c;
   border: solid 2px #570008;
   opacity: 0.9;
   min-height: 187px;
 }
+
+/* News section */
+
 .news-img {
   float: left;
   margin-right: 2%;
@@ -29,4 +32,13 @@
   text-align: left;
   margin-bottom: 5%;
   margin-right: 2%;
+}
+
+/* History section */
+
+@import "../../node_modules/react-image-gallery/styles/css/image-gallery.css";
+.image-gallery {
+  width: 50%;
+  margin-right: 25%;
+  margin-left: 25%;
 }
