@@ -4,7 +4,9 @@
   "homepage": "http://johnipsen.github.io/icc",
   "private": true,
   "dependencies": {
+    "radium": "^0.25.1",
     "react": "^16.7.0",
+    "react-coverflow": "^0.2.17",
     "react-dom": "^16.7.0",
     "react-image-gallery": "^0.8.12",
     "react-router": "^4.3.1",

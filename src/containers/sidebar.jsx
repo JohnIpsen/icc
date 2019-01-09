@@ -23,7 +23,7 @@ class SideNav extends Component {
             <Menu.Item href="/about">
               <Button className="side-link">About</Button>
             </Menu.Item>
-            <Menu.Item href="/about">
+            <Menu.Item href="/herdsires">
               <Button className="side-link">Herd Sires</Button>
             </Menu.Item>
             <Menu.Item href="/about">
