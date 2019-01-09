@@ -1,10 +1,31 @@
 import React, { Component } from "react";
+import { Button, Header, Image, Modal } from "semantic-ui-react";
 import main from "../../images/history/hist_main.jpg";
-import { StyleRoot } from "radium";
 import Coverflow from "react-coverflow";
 import "../../styles/about.css";
 
 class AngusSires extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isOpen: false
+    };
+  }
+
+  switchModal = () => {
+    if (this.state.isOpen) {
+      this.setState({
+        isOpen: false
+      });
+    } else {
+      this.setState({
+        isOpen: true
+      });
+    }
+    console.log(this.state.isOpen);
+  };
+
   render() {
     return (
       <div className="color-block">
@@ -17,37 +38,37 @@ class AngusSires extends Component {
           a sire must complete the rigorous testing course that competent Angus
           breeders put these proving bulls through before they touch our cows.
         </p>
-        <StyleRoot>
-          <Coverflow
-            displayQuantityOfSide={2}
-            navigation
-            infiniteScroll
-            enableHeading
-            media={{
-              "@media (max-width: 900px)": {
-                width: "600px",
-                height: "300px"
-              },
-              "@media (min-width: 900px)": {
-                width: "960px",
-                height: "600px"
-              }
-            }}
-          >
-            <img
-              src={main}
-              alt="Album one"
-              data-action="https://facebook.github.io/react/"
-            />
-            <img src={main} alt="Album two" data-action="http://passer.cc" />
-            <img src={main} alt="Album three" data-action="https://doce.cc/" />
-            <img
-              src={main}
-              alt="Album four"
-              data-action="http://tw.yahoo.com"
-            />
-          </Coverflow>
-        </StyleRoot>
+        <Coverflow
+          width={960}
+          height={480}
+          displayQuantityOfSide={2}
+          navigation
+          infiniteScroll
+          enableHeading
+        >
+          <img src={main} alt="Album one" onClick={() => this.switchModal()} />
+          <img src={main} alt="Album two" data-action="http://passer.cc" />
+          <img src={main} alt="Album three" data-action="https://doce.cc/" />
+          <img src={main} alt="Album four" data-action="http://tw.yahoo.com" />
+        </Coverflow>
+        <Modal
+          dimmer={this.state.isOpen}
+          open={this.state.isOpen}
+          onClose={() => this.switchModal()}
+        >
+          <Modal.Header>Select a Photo</Modal.Header>
+          <Modal.Content>
+            <img className="modal-img" src={main} alt="Album one" />
+            <Modal.Description>
+              <Header>Default Profile Image</Header>
+              <p>
+                We've found the following gravatar image associated with your
+                e-mail address.
+              </p>
+              <p>Is it okay to use this photo?</p>
+            </Modal.Description>
+          </Modal.Content>
+        </Modal>
       </div>
     );
   }
