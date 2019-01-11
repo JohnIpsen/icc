@@ -28,6 +28,9 @@
   border-bottom: 0;
   font-size: 20px;
 }
+#bottom-link {
+  border-bottom: solid 1.5px #570008;
+}
 .side-link:hover {
   background-color: #570008;
   color: #dcbe9c;

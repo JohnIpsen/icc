@@ -39,7 +39,9 @@ class SideNav extends Component {
               <Button className="side-link">Links</Button>
             </Menu.Item>
             <Menu.Item href="/about">
-              <Button className="side-link">Contact</Button>
+              <Button className="side-link" id="bottom-link">
+                Contact
+              </Button>
             </Menu.Item>
           </Sidebar>
         </Sidebar.Pushable>
