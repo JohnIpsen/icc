@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Tab } from "semantic-ui-react";
 import News from "../components/about/news";
 import History from "../components/about/history";
+import Philosophy from "../components/about/philosophy";
 import "../styles/about.css";
 
 class About extends Component {
@@ -27,7 +28,11 @@ class About extends Component {
         },
         {
           menuItem: "Philosophy",
-          render: () => <Tab.Pane>Tab 3 Content</Tab.Pane>
+          render: () => (
+            <Tab.Pane>
+              <Philosophy />
+            </Tab.Pane>
+          )
         }
       ]
     };
