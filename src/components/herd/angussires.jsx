@@ -11,6 +11,7 @@ class AngusSires extends Component {
 
     this.state = {
       key: "",
+      data: {},
       isOpen: false,
       modalBg: "invisible"
     };
@@ -18,10 +19,19 @@ class AngusSires extends Component {
 
   setEntry = async entry => {
     await this.setState({
-      key: entry
+      key: entry,
+      data: this.assignData(entry)
     });
+    console.log(this.state.entryData);
     this.switchModal();
   };
+  assignData(entry) {
+    return {
+      "1": {
+        name: "ICC 9969 Gunner 86Y"
+      }
+    };
+  }
   switchModal = () => {
     if (this.state.isOpen) {
       this.setState({
