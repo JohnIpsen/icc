@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Button, Modal } from "semantic-ui-react";
+import data from "../../angusbulls.json";
 import main from "../../images/history/hist_main.jpg";
 import Coverflow from "react-coverflow";
 import "../../styles/about.css";
@@ -9,14 +10,22 @@ class AngusSires extends Component {
     super(props);
 
     this.state = {
+      key: "",
       isOpen: false,
       modalBg: "invisible"
     };
   }
 
+  setEntry = async entry => {
+    await this.setState({
+      key: entry
+    });
+    this.switchModal();
+  };
   switchModal = () => {
     if (this.state.isOpen) {
       this.setState({
+        key: "",
         isOpen: false,
         modalBg: "invisible"
       });
@@ -26,7 +35,6 @@ class AngusSires extends Component {
         modalBg: "modal-background"
       });
     }
-    console.log(this.state.isOpen);
   };
 
   render() {
@@ -54,7 +62,7 @@ class AngusSires extends Component {
             <img
               src={main}
               alt="Album one"
-              onClick={() => this.switchModal()}
+              onClick={() => this.setEntry("1")}
             />
             <img src={main} alt="Album two" data-action="http://passer.cc" />
             <img src={main} alt="Album three" data-action="https://doce.cc/" />
@@ -73,7 +81,7 @@ class AngusSires extends Component {
             <Modal.Content>
               <img className="modal-img" src={main} alt="Album one" />
               <Modal.Description>
-                <h2>Name Placeholder</h2>
+                <h2 key={this.state.key}>{data.name}</h2>
                 <p>
                   We've found the following gravatar image associated with your
                   e-mail address.
