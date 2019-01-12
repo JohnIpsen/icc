@@ -9,6 +9,21 @@
   margin-left: 15%;
 }
 
+.tabular .item {
+  background-color: #dcbe9c;
+  opacity: 0.9;
+  border: solid 2px #570008;
+  padding: 0 2%;
+}
+
+.color-block {
+  margin-top: 2%;
+  background-color: #dcbe9c;
+  border: solid 2px #570008;
+  opacity: 0.9;
+  min-height: 187px;
+}
+
 .modal {
   position: absolute;
   top: 0;
