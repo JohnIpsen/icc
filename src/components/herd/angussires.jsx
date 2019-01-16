@@ -10,32 +10,22 @@ class AngusSires extends Component {
     super(props);
 
     this.state = {
-      key: "",
-      data: {},
+      animal: {},
       isOpen: false,
       modalBg: "invisible"
     };
   }
 
-  setEntry = async entry => {
+  setData = async entry => {
     await this.setState({
-      key: entry,
-      data: this.assignData(entry)
+      animal: data[entry]
     });
-    console.log(this.state.entryData);
+    console.log(this.state.animal);
     this.switchModal();
   };
-  assignData(entry) {
-    return {
-      "1": {
-        name: "ICC 9969 Gunner 86Y"
-      }
-    };
-  }
   switchModal = () => {
     if (this.state.isOpen) {
       this.setState({
-        key: "",
         isOpen: false,
         modalBg: "invisible"
       });
@@ -69,11 +59,7 @@ class AngusSires extends Component {
             infiniteScroll
             enableHeading
           >
-            <img
-              src={main}
-              alt="Album one"
-              onClick={() => this.setEntry("1")}
-            />
+            <img src={main} alt="Album one" onClick={() => this.setData(1)} />
             <img src={main} alt="Album two" data-action="http://passer.cc" />
             <img src={main} alt="Album three" data-action="https://doce.cc/" />
             <img
@@ -91,7 +77,7 @@ class AngusSires extends Component {
             <Modal.Content>
               <img className="modal-img" src={main} alt="Album one" />
               <Modal.Description>
-                <h2 key={this.state.key}>{data.name}</h2>
+                <h2>{this.state.animal.name}</h2>
                 <p>
                   We've found the following gravatar image associated with your
                   e-mail address.
@@ -99,6 +85,13 @@ class AngusSires extends Component {
                 <p>Is it okay to use this photo?</p>
               </Modal.Description>
             </Modal.Content>
+            <Modal.Actions>
+              <Button
+                onClick={this.switchModal}
+                icon="checkmark"
+                content="Close"
+              />
+            </Modal.Actions>
           </Modal>
         </div>
       </div>
