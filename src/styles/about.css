@@ -20,7 +20,7 @@
 .news-img {
   float: left;
   margin-right: 2%;
-  max-height: 187px;
+  height: 100%;
 }
 .news-header {
   text-align: left;

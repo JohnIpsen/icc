@@ -1,50 +1,41 @@
 import React, { Component } from "react";
 import "../styles/sidebar.css";
-import { Menu, Segment, Sidebar, Button } from "semantic-ui-react";
 
 class SideNav extends Component {
   render() {
     return (
       <div>
         <div className="side-bar" id="side-bg-color" />
-        <Sidebar.Pushable className="side-bar" as={Segment}>
-          <Sidebar
-            className="side-menu"
-            as={Menu}
-            animation="overlay"
-            inverted
-            vertical
-            visible
-            width="thin"
-          >
-            <Menu.Item href="/">
-              <Button className="side-link">Home</Button>
-            </Menu.Item>
-            <Menu.Item href="/about">
-              <Button className="side-link">About</Button>
-            </Menu.Item>
-            <Menu.Item href="/herdsires">
-              <Button className="side-link">Herd Sires</Button>
-            </Menu.Item>
-            <Menu.Item href="/about">
-              <Button className="side-link">Cowherd</Button>
-            </Menu.Item>
-            <Menu.Item href="/about">
-              <Button className="side-link">For Sale</Button>
-            </Menu.Item>
-            <Menu.Item href="/about">
-              <Button className="side-link">Gallery</Button>
-            </Menu.Item>
-            <Menu.Item href="/about">
-              <Button className="side-link">Links</Button>
-            </Menu.Item>
-            <Menu.Item href="/about">
-              <Button className="side-link" id="bottom-link">
+        <div className="side-bar">
+          <div className="side-menu">
+            <a href="/">
+              <button className="side-link">Home</button>
+            </a>
+            <a href="/about">
+              <button className="side-link">About</button>
+            </a>
+            <a href="/herdsires">
+              <button className="side-link">Herd Sires</button>
+            </a>
+            <a href="/about">
+              <button className="side-link">Cowherd</button>
+            </a>
+            <a href="/about">
+              <button className="side-link">For Sale</button>
+            </a>
+            <a href="/about">
+              <button className="side-link">Gallery</button>
+            </a>
+            <a href="/about">
+              <button className="side-link">Links</button>
+            </a>
+            <a href="/about">
+              <button className="side-link" id="bottom-link">
                 Contact
-              </Button>
-            </Menu.Item>
-          </Sidebar>
-        </Sidebar.Pushable>
+              </button>
+            </a>
+          </div>
+        </div>
       </div>
     );
   }
